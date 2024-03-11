@@ -1,12 +1,19 @@
 import StarshipCard from "../components/StarshipCard";
-let ships = ["Pirate","Naval","Fandom"]
-let shipList = ships.map((shipName) => {
-    return <StarshipCard shipName={shipName} />
-})
-function Index() {
-  return (
-    <>{shipList}</>
-  )
+let ships = ["Pirate", "Naval", "Fandom"];
+
+function getShips() {
+  try {
+    let shipList = ships.map((shipName) => {
+      return <StarshipCard shipName={shipName} />;
+    });
+    return shipList
+  } catch (error) {
+    return <StarshipCard shipName="Ships not found" />;
+  }
 }
 
-export default Index
+function Index() {
+  return <>{getShips()}</>;
+}
+
+export default Index;
