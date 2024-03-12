@@ -1,5 +1,6 @@
-export default function StarshipCard({shipName}) {
+export default function StarshipCard(props) {
+  const { shipName } = props
   return (
-    <div className="shipCard">{shipName}</div>
+    <div className="shipCard"><div>Hi</div>{shipName}</div>
   )
 }

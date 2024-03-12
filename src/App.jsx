@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import NavBar from "./components/Nav"
-import Index from "./pages/index"
+import GetShips from "./pages/index"
 import './App.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
   <NavBar />
-    <Index />
+    <GetShips />
     </>
   )
 }
